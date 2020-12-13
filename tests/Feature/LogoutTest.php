@@ -25,7 +25,6 @@ class LogoutTest extends TestCase
 
     public function testLogoutReturnsSuccess()
     {
-        $this->withoutExceptionHandling();
         $this->actingAs(User::first())
             ->postJson('/logout')
             ->assertStatus(204);
